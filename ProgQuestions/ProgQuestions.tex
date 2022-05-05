@@ -45,12 +45,30 @@
 \subsection{Group Anagrams}
 \href{https://leetcode.com/problems/group-anagrams/submissions/}{link to Question}
 
-Some text here
+The key  idea to solve this question would be that the template of a map could be yet another map.
+
 \begin {lstlisting}
 map<map<char,int>,vector<string>> ans;
 \end{lstlisting}
-
+\begin{enumerate}
+ \item {
+       
+       For each element in the given string, we would generate a
+       \begin {lstlisting}
+       map<char,int> obj
+       \end{lstlisting}
+       where obj would keep count of the number of characters that have appeared in the given string.
+       }
+       
+       \item{
+                   Obj would be used as a key to insert the current string in the correct index of the ans map.
+             }
+ \item {
+       Lastly, we would just have to transfer the nested vectors in the ans map to the correct type.
+       In this case, it is vector<vector<string>>.
+       }
+\end{enumerate}
 \subsection{Another Question}
-
+$y=mx+c$
 
 \end{document}
