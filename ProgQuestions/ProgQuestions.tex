@@ -42,9 +42,11 @@
 %\tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Arrays and Hashmaps%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Array and Hashmaps}
-\subsection{Group Anagrams}
-\href{https://leetcode.com/problems/group-anagrams/submissions/}{link to Question}
-
+Arrays and hashmaps are datastructures used to store a collection of variables.
+We can access elements in an array by providing an integer based index. On the other hand, we can access elements of a hashmap by providing a unique key which corresponds to an element. The key could be any variable/object.
+\subsection{
+ \href{https://leetcode.com/problems/group-anagrams/submissions/}{Group Anagrams}
+}
 The key  idea to solve this question would be that the template of a map could be yet another map.
 
 \begin {lstlisting}
@@ -68,7 +70,50 @@ map<map<char,int>,vector<string>> ans;
        In this case, it is vector<vector<string>>.
        }
 \end{enumerate}
-\subsection{Another Question}
-$y=mx+c$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Two Pointers%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Two Pointers}
+%TODO: add in a description of the core idea of two pointers
+\subsection{
+ \href{https://leetcode.com/problems/valid-palindrome/submissions/}{Valid Palindrome}
+}
+The hardest part to this question would be to convert a arbitary string to an array of
+alphanumeric characters only. Then, we could apply the two pointers idea to compare the first and the last elements in the array, to see if they match.
+\begin{lstlisting}
+vector<char> filtered;
+for(int i=0;i<s.length();i++){
+  if(isalnum(s[i])){
+    filtered.push_back(tolower(s[i]));
+   }
+ }
+\end{lstlisting}
+
+\subsection{
+ \href{https://leetcode.com/problems/3sum/}{3Sum}
+}
+
+This problem could be reduced to the \href{https://leetcode.com/problems/two-sum/}{2Sum}
+problem, albeit with a couple of modifications.
+\begin{enumerate}
+ \item{
+             If the given array has less than 3 elements, we can't really do anything. Thus, we should just return an empty array.
+             
+       }
+ \item{
+             We would sort the given array at first.
+       }
+ \item{
+             Then, we would pick the first element (starting from the left of the array).
+             Starting from index 1 and above, we should check the element to the left to see if we have already checked it. This step is critical to ensure that we do now create duplicate triplets.
+       }
+ \item {
+       Then, we would use the two pointers idea to find a pair of elements which would satisfy the criteria of $ele1+ele2+ele3=0$. Once we have found a suitable pair, we should continue checking, as there could be more than one solution.
+       
+       }
+       \item{
+                   We could use a set to ensure that we do not generate identical triplets, before copying the contents of the set back to a vector of vector<int>.
+             }
+\end{enumerate}
+
 
 \end{document}

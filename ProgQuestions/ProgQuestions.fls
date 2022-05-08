@@ -444,6 +444,7 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm
+INPUT c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
@@ -452,7 +453,6 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
-INPUT c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ProgQuestions.aux
 INPUT ./ProgQuestions.out
 INPUT ./ProgQuestions.out
