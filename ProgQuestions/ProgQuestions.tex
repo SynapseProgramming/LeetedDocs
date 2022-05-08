@@ -73,7 +73,28 @@ map<map<char,int>,vector<string>> ans;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Two Pointers%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Two Pointers}
-%TODO: add in a description of the core idea of two pointers
+The main idea to two pointers would be to pick a pair of elements from an array, where the chosen pair of elements would satisfy some condition. More often than not, we would sort the array first.
+
+A common application would be to find a pair of integers whose sum is = to some value.
+\begin{enumerate}
+ \item{Sort the array of integers}
+ \item{
+       
+             We would initialize the left integer iterator to be 0 to refer to the left most index, and the right integer iterator to be the size of the array to refer to the right most index.
+       }
+ \item{
+             If the current sum is too low, we would increase the left iterator to achieve a greater sum.
+       }
+ \item{
+             If the current sum is too high, we would decrease the right iterator to achieve a lower sum.
+       }
+ \item {
+       If the left iterator = right iterator, then we have not found a pair of integers to satisfy the given sum.
+       }
+\end{enumerate}
+
+
+
 \subsection{
  \href{https://leetcode.com/problems/valid-palindrome/submissions/}{Valid Palindrome}
 }
@@ -104,7 +125,7 @@ problem, albeit with a couple of modifications.
        }
  \item{
              Then, we would pick the first element (starting from the left of the array).
-             Starting from index 1 and above, we should check the element to the left to see if we have already checked it. This step is critical to ensure that we do now create duplicate triplets.
+             Starting from index 1 and above, we should check the element to the left to see if we have already checked it. This step is critical to ensure that we do not create duplicate triplets.
        }
  \item {
        Then, we would use the two pointers idea to find a pair of elements which would satisfy the criteria of $ele1+ele2+ele3=0$. Once we have found a suitable pair, we should continue checking, as there could be more than one solution.
