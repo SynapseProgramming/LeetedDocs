@@ -1,0 +1,8 @@
+#ignore everything
+/*
+
+#except these few files
+!.gitignore
+!ProgQuestions.tex
+!ProgQuestions.pdf
+!.github
